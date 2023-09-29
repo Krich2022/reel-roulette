@@ -2,6 +2,27 @@ $(function () {
   $("button").on("click", generateMovie);
 });
 
+const genres = [
+  "horror",
+  "adventure",
+  "fantasy",
+  "animation",
+  "drama",
+  "action",
+  "comedy",
+  "history",
+  "western",
+  "thriller",
+  "crime",
+  "documentary",
+  "sciFi",
+  "mystery",
+  "music",
+  "romance",
+  "family",
+  "war",
+];
+
 const services = {
   netflix: "netflix",
   prime: "prime.subscription",
@@ -25,7 +46,7 @@ function generateMovie(e) {
   e.preventDefault();
   let selectedServices = [];
 
-  $("#services :checkbox").each(function () {
+  $("#services :checkbox:checked").each(function () {
     let checkboxId = $(this).attr("id");
     if (services.hasOwnProperty(checkboxId)) {
       let value = services[checkboxId];
@@ -34,6 +55,11 @@ function generateMovie(e) {
   });
 
   url += selectedServices.join(",");
+  url += "&country=%3CREQUIRED%3E&keyword=";
+
+  $("#genres :checkbox:checked").each(function () {
+    let checkboxId = $(this).attr("id");
+  });
 
   console.log(url);
 
