@@ -1,4 +1,7 @@
-$("button").on("click", generateMovie);
+$(function () {
+  $("button").on("click", generateMovie);
+});
+
 const services = {
   netflix: "netflix",
   prime: "prime.subscription",
@@ -18,15 +21,22 @@ const options = {
 
 let url =
   "https://streaming-availability.p.rapidapi.com/search/filters?services=";
-function generateMovie() {
-  $("#services:checkbox").each(() => {
+function generateMovie(e) {
+  e.preventDefault();
+  let selectedServices = [];
+
+  $("#services :checkbox").each(function () {
     let checkboxId = $(this).attr("id");
     if (services.hasOwnProperty(checkboxId)) {
       let value = services[checkboxId];
-      url += `${value}`;
+      selectedServices.push(value);
     }
   });
+
+  url += selectedServices.join(",");
+
   console.log(url);
+
   //   fetch(url, options)
   //     .then((response) => response.json())
   //     .then((data) => console.log(data))
