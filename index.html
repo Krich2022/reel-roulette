@@ -1,24 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reel Roulette</title>
-    <link rel="stylesheet" href="./assets/css/reset.css" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
-      rel="stylesheet" />
-    <link rel="stylesheet" href="./assets/css/style.css" />
-  </head>
-  <body>
-    <header><h1>Reel Roulette</h1></header>
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+</head>
+
+<body>
     <main>
-        <section><button>Get Movie</button></section>
-        <dialog id="modal"></dialog>
+        <section><button class="button get-movie">Get Movie</button></section>
+        <dialog class="modal" id="modal">
+            <h2>Here you are</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <button class="button close"> close</button>
+        </dialog>
+        
     </main>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="./assets/script/script.js"></script>
-    <script src="./assets/script/api.js"></script>
-  </body>
+</body>
+
 </html>
