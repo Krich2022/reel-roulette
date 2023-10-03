@@ -1,0 +1,13 @@
+h1{
+    font-size: x-large;
+}
+h2{
+    font-size: larger;
+}
+
+.serviceBtn {
+    display:flex
+}
+.genreBtn {
+    display:flex
+}
