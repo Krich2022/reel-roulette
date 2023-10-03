@@ -10,3 +10,19 @@
     margin: 0 0 0.5rem 0;
   }
 }
+
+h1 {
+  font-size: x-large;
+}
+
+h2 {
+  font-size: larger;
+}
+
+.serviceBtn {
+  display: flex;
+}
+
+.genreBtn {
+  display: flex;
+}
