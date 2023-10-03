@@ -1,3 +1,4 @@
+
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
@@ -10,9 +11,10 @@
 }
 
 
+
 .modal {
   padding: 1em;
-  max-width: 50ch;
+  max-width: 75%;
 
   & > * {
     margin: 0 0 0.5rem 0;
@@ -20,6 +22,7 @@
 }
 
 h1 {
+
     font-size: x-large;
     font-weight: bold;
     border: 2px solid black;
@@ -35,14 +38,15 @@ h2 {
     border-radius: 2px;
     background: var(--pop);
     padding: 1%;
+
 }
 
 .serviceBtn {
-    display:flex;
+  display: flex;
 }
 
 .genreBtn {
-    display:flex;
+  display: flex;
 }
 
 #services {
