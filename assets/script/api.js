@@ -81,8 +81,8 @@ function generateMovie(e) {
     url += selectedGenres.join("%2C");
     url += `&genres_relation=or&show_type=movie&${orderBy[randomOrder]}&desc=${descending}`;
 
-    fetch(url, options)
-        .then((response) => response.json())
-        .then((data) => console.log(data))
-        .catch((error) => console.error(error));
+    //fetch(url, options)
+        //.then((response) => response.json())
+        //.then((data) => console.log(data))
+        //.catch((error) => console.error(error));
 }
