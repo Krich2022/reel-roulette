@@ -11,6 +11,6 @@ close.addEventListener('click', () => {
     modal.close();
 })
 
-store.addEventListener('click', () => {
+//store.addEventListener('click', () => {
     
-})
+//})
