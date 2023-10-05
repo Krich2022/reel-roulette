@@ -101,8 +101,7 @@ function getRandomMovie() {
   if (movieNumber === 25) {
     generateMovie();
   } else {
-    let imdb = movies[movieNumber].imdbID;
-    console.log(imdb);
+    let imdb = movies[movieNumber].imdbId;
     const url = `https://moviesdatabase.p.rapidapi.com/titles/${imdb}`;
     const options = {
       method: "GET",
