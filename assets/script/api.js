@@ -1,6 +1,6 @@
 $(function () {
   $("#get-movie").on("click", generateMovie);
-  $("#try").on("click", getRandomMovie);
+  $("#try").on("click", tryAgain);
   $("#store").on("click", storeMovie);
 });
 let goodMovies = JSON.parse(localStorage.getItem("goodMovies"));
@@ -96,16 +96,12 @@ function generateMovie(e) {
     .then((response) => response.json())
     .then((data) => {
       movies = data.result;
-      console.log(data);
-      console.log(movies);
       getRandomMovie();
     })
     .catch((error) => console.error(error));
 }
 
 function getRandomMovie() {
-  console.log("movieNumber:", movieNumber);
-  console.log(movies);
   if (movieNumber === 25) {
     generateMovie();
     return;
@@ -126,7 +122,6 @@ function getRandomMovie() {
         if (moviePoster) {
           $("#moviePoster").attr("src", moviePoster);
         }
-        console.log(moviePoster);
       })
       .catch((error) => console.error(error));
     $("#title").text(movies[movieNumber].title);
