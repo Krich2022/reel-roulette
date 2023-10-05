@@ -10,8 +10,6 @@
   background: var(--dark);
 }
 
-
-
 .modal {
   padding: 1em;
   max-width: 75%;
@@ -19,56 +17,4 @@
   & > * {
     margin: 0 0 0.5rem 0;
   }
-}
-
-h1 {
-
-    font-size: x-large;
-    font-weight: bold;
-    border: 2px solid black;
-    border-radius: 2px;
-    background: var(--pop);
-    padding: 1%;
-}
-
-h2 {
-    font-size: larger;
-    font-weight: bold;
-    border-bottom: 2px solid black;
-    border-radius: 2px;
-    background: var(--pop);
-    padding: 1%;
-
-}
-
-.serviceBtn {
-  display: flex;
-}
-
-.genreBtn {
-  display: flex;
-}
-
-#services {
-  box-sizing: border-box;
-  max-width: 90%;
-  display:flex;
-  flex-direction: column;
-  padding: 1%;
-  border: 2px solid black;
-  border-radius: 2px;
-  background: var(--light);
-  align-content: center;
-}
-
-#selector {
-  box-sizing: border-box;
-  max-width: 90%;
-  display:flex;
-  flex-direction: column;
-  padding: 1%;
-  border: 2px solid black;
-  border-radius: 2px;
-  background: var(--light);
-  align-content: center;
 }
