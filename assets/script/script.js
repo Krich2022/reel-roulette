@@ -1,16 +1,15 @@
-const modal = document.querySelector('#modal')
-const getMovie = document.querySelector('#get-movie')
-const close = document.querySelector('#close')
-const store = document.querySelector('#store')
 
-getMovie.addEventListener('click', () => {
-    modal.show();
-})
 
-close.addEventListener('click', () => {
-    modal.close();
-})
+  document.getElementById('get-movie').addEventListener('click', function () {
+    document.getElementById('modal').classList.remove('hidden');
+  });
 
-//store.addEventListener('click', () => {
-    
-//})
+  document.getElementById('modal').addEventListener('click', function (e) {
+    if (e.target === this) {
+      this.classList.add('hidden');
+    }
+  });
+
+  document.getElementById('closeModal').addEventListener('click', function () {
+    document.getElementById('modal').classList.add('hidden');
+  });
