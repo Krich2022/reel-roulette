@@ -16,61 +16,40 @@
   </header>
   <main>
 
-    <div class="w-1/4 p-4">
-      <h2>Peviously on</h2>
-      <ul>
-        <li>List Item 1</li>
-        <li>List Item 2</li>
-        <li>List Item 3</li>
-      </ul>
-    </div>
-
-    <section id="services">
-      <h2>Services</h2>
-      <ul id="serviceList"></ul>
-      <div id="netflixContainer" class="serviceBtn">
-        <label for="netflix">
-          <h3>Netflix</h3>
-        </label>
-        <input type="checkbox" name="Netflix" id="netflix" />
-      </div>
-      <div id="primeContainer" class="serviceBtn">
-        <label for="prime">
-          <h3>Amazon Prime Video</h3>
-        </label>
-        <input type="checkbox" name="Prime" id="prime" />
-      </div>
-      <div id="appleContainer" class="serviceBtn">
-        <label for="apple">
-          <h3>Apple TV</h3>
-        </label>
-        <input type="checkbox" name="Apple" id="apple" />
-      </div>
-      <div id="HBOmaxContainer" class="serviceBtn">
-        <label for="HBOmax">
-          <h3>HBO max</h3>
-        </label>
-        <input type="checkbox" name="HBO Max" id="HBOmax" />
-      </div>
-      <div id="huluContainer" class="serviceBtn">
-        <label for="hulu">
-          <h3>Hulu</h3>
-        </label>
-        <input type="checkbox" name="Hulu" id="hulu" />
-      </div>
-      <div id="buyRentContainer" class="serviceBtn">
-        <label for="buyRent">
-          <h3>Buy/Rent</h3>
-        </label>
-        <input type="checkbox" name="BuyRent" id="buyRent" />
-      </div>
-      <div id="peacockContainer" class="serviceBtn">
-        <label for="peacock">
-          <h3>Peacock</h3>
-        </label>
-        <input type="checkbox" name="Peacock" id="peacock" />
-      </div>
-    </section>
+       
+        
+      <section id="services">
+        <h2>Services</h2>
+        <ul id="serviceList"></ul>
+        <div id="netflixContainer" class="serviceBtn">
+          <label for="netflix"><h3>Netflix</h3></label>
+          <input type="checkbox" name="Netflix" id="netflix" />
+        </div>
+        <div id="primeContainer" class="serviceBtn">
+          <label for="prime"><h3>Amazon Prime Video</h3></label>
+          <input type="checkbox" name="Prime" id="prime" />
+        </div>
+        <div id="appleContainer" class="serviceBtn">
+          <label for="apple"><h3>Apple TV</h3></label>
+          <input type="checkbox" name="Apple" id="apple" />
+        </div>
+        <div id="HBOmaxContainer" class="serviceBtn">
+          <label for="HBOmax"><h3>HBO max</h3></label>
+          <input type="checkbox" name="HBO Max" id="HBOmax" />
+        </div>
+        <div id="huluContainer" class="serviceBtn">
+          <label for="hulu"><h3>Hulu</h3></label>
+          <input type="checkbox" name="Hulu" id="hulu" />
+        </div>
+        <div id="buyRentContainer" class="serviceBtn">
+          <label for="buyRent"><h3>Buy/Rent</h3></label>
+          <input type="checkbox" name="BuyRent" id="buyRent" />
+        </div>
+        <div id="peacockContainer" class="serviceBtn">
+          <label for="peacock"><h3>Peacock</h3></label>
+          <input type="checkbox" name="Peacock" id="peacock" />
+        </div>
+      </section>
 
     <section id="selector">
       <h2>Select</h2>
@@ -184,17 +163,14 @@
           </label>
           <input type="checkbox" name="War" id="war" />
         </div>
-
-        <div id="keyword">
-          <h2>Keywords</h2>
-          <input type="text" name="Keywords" id="keywords" />
-        </div>
       </div>
     </section>
 
-    <div id="history">
-      <h2>History</h2>
-    </div>
+        <div class="bg-gray-300 p-4 border-2px round">
+          <div class="flex bg-red-800 rounded-lg text-lg text-Black font-bold">
+            Peviously shown</div>
+        <ul></ul>
+        </div>
 
     <button id="get-movie"
       class="bg-red-800 hover:bg-blue-700 text-black font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
@@ -213,9 +189,9 @@
           </div>
           <div class="w-1/2 p-4">
             <div class="p-2 bg-red-800 text-lg text-Black font-bold rounded-lg">
-              <h2 id="title">Movie Title</h2>
+              <div id="title">Movie Title</div>
             </div>
-            <ul id="streamingList">Where to get it</ul>
+            <ul id="streamingList" class="bg-red-800 rounded-lg">Where to get it</ul>
           </div>
         </div>
         <div class="flex justify-center p-4">
