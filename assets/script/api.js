@@ -100,6 +100,7 @@ function generateMovie(e) {
 function getRandomMovie() {
   if (movieNumber === 25) {
     generateMovie();
+    return;
   } else {
     let imdb = movies[movieNumber].imdbId;
     const url = `https://moviesdatabase.p.rapidapi.com/titles/${imdb}`;
@@ -114,7 +115,9 @@ function getRandomMovie() {
       .then((response) => response.json())
       .then((data) => {
         let moviePoster = data.results.primaryImage.url;
-        $("#moviePoster").attr("src", moviePoster);
+        if (moviePoster) {
+          $("#moviePoster").attr("src", moviePoster);
+        }
       });
   }
 }
