@@ -1,181 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
+<
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reel Roulette</title>
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Reel Roulette</title>
-  <link rel="stylesheet" href="./assets/css/reset.css" />
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="./assets/css/style.css" />
-</head>
-
-<body>
-  <header>
-    <h1>Reel Roulette</h1>
-  </header>
-  <main>
-
-       
-        
-      <section id="services">
-        <h2>Services</h2>
-        <ul id="serviceList"></ul>
-        <div id="netflixContainer" class="serviceBtn">
-          <label for="netflix"><h3>Netflix</h3></label>
-          <input type="checkbox" name="Netflix" id="netflix" />
-        </div>
-        <div id="primeContainer" class="serviceBtn">
-          <label for="prime"><h3>Amazon Prime Video</h3></label>
-          <input type="checkbox" name="Prime" id="prime" />
-        </div>
-        <div id="appleContainer" class="serviceBtn">
-          <label for="apple"><h3>Apple TV</h3></label>
-          <input type="checkbox" name="Apple" id="apple" />
-        </div>
-        <div id="HBOmaxContainer" class="serviceBtn">
-          <label for="HBOmax"><h3>HBO max</h3></label>
-          <input type="checkbox" name="HBO Max" id="HBOmax" />
-        </div>
-        <div id="huluContainer" class="serviceBtn">
-          <label for="hulu"><h3>Hulu</h3></label>
-          <input type="checkbox" name="Hulu" id="hulu" />
-        </div>
-        <div id="buyRentContainer" class="serviceBtn">
-          <label for="buyRent"><h3>Buy/Rent</h3></label>
-          <input type="checkbox" name="BuyRent" id="buyRent" />
-        </div>
-        <div id="peacockContainer" class="serviceBtn">
-          <label for="peacock"><h3>Peacock</h3></label>
-          <input type="checkbox" name="Peacock" id="peacock" />
+  <body>
+    <header class="bg-red-800 text-2xl text-center text-Black font-bold p-4"><h1>Reel Roulette</h1></header>
+    <main class="flex flex-col justify-center align-center">
+      <section id="previous">
+        <button id="previousBtn" class="toggleList bg-red-800 text-xl text-black px-4 py-2 rounded-md w-11/12 py-3 my-2">Previously Shown</button>
+        <div id="checkboxList" class="hidden bg-white border rounded-lg w-11/12 shadow-lg p-4">
+          <ul>
+            <li>List Item 1</li>
+            <li>List Item 2</li>
+            <li>List Item 3</li>
+          </ul>
         </div>
       </section>
 
-    <section id="selector">
-      <h2>Select</h2>
-      <div id="genres">
-        <h2>Genres</h2>
-        <div id="horrorContainer" class="genreBtn">
-          <label for="horror">
-            <h3>Horror</h3>
+        
+      <section id="services">
+        <button id="serviceBtn" class="toggleList bg-red-800 text-xl text-black px-4 py-2 rounded-md w-11/12 py-3 my-2">Services</button>
+        <div id="checkboxList" class="hidden bg-white border rounded-lg w-11/12 shadow-lg p-4">
+          <label for="netflix" class="block mb-2">Netflix
+            <input type="checkbox" name="Netflix" id="netflix" />
           </label>
-          <input type="checkbox" name="Horror" id="horror" />
-        </div>
-        <div id="adventureContainer" class="genreBtn">
-          <label for="adventure">
-            <h3>Adventure</h3>
+          <label for="prime" class="block mb-2">Amazon Prime Video
+            <input type="checkbox" name="Prime" id="prime" />
           </label>
-          <input type="checkbox" name="Adventure" id="adventure" />
-        </div>
-        <div id="fantasyContainer" class="genreBtn">
-          <label for="fantasy">
-            <h3>Fantasy</h3>
+          <label for="apple" class="block mb-2">Apple TV
+            <input type="checkbox" name="Prime" id="apple" />
           </label>
-          <input type="checkbox" name="Fantasy" id="fantasy" />
-        </div>
-        <div id="animationContainer" class="genreBtn">
-          <label for="animation">
-            <h3>Animation</h3>
+          <label for="HBOmax" class="block mb-2">HBO Max
+            <input type="checkbox" name="HBOMax" id="HBOmax" />
           </label>
-          <input type="checkbox" name="Animation" id="animation" />
-        </div>
-        <div id="dramaContainer" class="genreBtn">
-          <label for="drama">
-            <h3>Drama</h3>
+          <label for="hulu" class="block mb-2">Hulu
+            <input type="checkbox" name="Hulu" id="hulu" />
           </label>
-          <input type="checkbox" name="Drama" id="drama" />
-        </div>
-        <div id="actionContainer" class="genreBtn">
-          <label for="action">
-            <h3>Action</h3>
+          <label for="buyRent" class="block mb-2">Buy/Rent
+            <input type="checkbox" name="BuyRent" id="buyRent" />
           </label>
-          <input type="checkbox" name="Action" id="action" />
-        </div>
-        <div id="comedyContainer" class="genreBtn">
-          <label for="comedy">
-            <h3>Comedy</h3>
+          <label for="peacock" class="block mb-2">Peacock
+            <input type="checkbox" name="Peacock" id="peacock" />
           </label>
-          <input type="checkbox" name="Comedy" id="comedy" />
         </div>
-        <div id="historyContainer" class="genreBtn">
-          <label for="history">
-            <h3>History</h3>
-          </label>
-          <input type="checkbox" name="History" id="history" />
-        </div>
-        <div id="westernContainer" class="genreBtn">
-          <label for="comedy">
-            <h3>Western</h3>
-          </label>
-          <input type="checkbox" name="Western" id="western" />
-        </div>
-        <div id="thrillerContainer" class="genreBtn">
-          <label for="thriller">
-            <h3>Horror</h3>
-          </label>
-          <input type="checkbox" name="Thriller" id="thriller" />
-        </div>
-        <div id="crimeContainer" class="genreBtn">
-          <label for="crime">
-            <h3>Crime</h3>
-          </label>
-          <input type="checkbox" name="Crime" id="crime" />
-        </div>
-        <div id="documentaryContainer" class="genreBtn">
-          <label for="documentary">
-            <h3>Documentary</h3>
-          </label>
-          <input type="checkbox" name="Documentary" id="documentary" />
-        </div>
-        <div id="sciFiContainer" class="genreBtn">
-          <label for="documentary">
-            <h3>ScienceFiction</h3>
-          </label>
-          <input type="checkbox" name="SciFi" id="sciFi" />
-        </div>
-        <div id="mysteryContainer" class="genreBtn">
-          <label for="documentary">
-            <h3>Mystery</h3>
-          </label>
-          <input type="checkbox" name="Mystery" id="mystery" />
-        </div>
-        <div id="musicContainer" class="genreBtn">
-          <label for="documentary">
-            <h3>Music</h3>
-          </label>
-          <input type="checkbox" name="Music" id="music" />
-        </div>
-        <div id="romanceContainer" class="genreBtn">
-          <label for="documentary">
-            <h3>Romance</h3>
-          </label>
-          <input type="checkbox" name="Romance" id="romance" />
-        </div>
-        <div id="familyContainer" class="genreBtn">
-          <label for="documentary">
-            <h3>Family</h3>
-          </label>
-          <input type="checkbox" name="Family" id="family" />
-        </div>
-        <div id="warContainer" class="genreBtn">
-          <label for="documentary">
-            <h3>War</h3>
-          </label>
-          <input type="checkbox" name="War" id="war" />
-        </div>
-      </div>
-    </section>
+      </section>
 
-        <div class="bg-gray-300 p-4 border-2px round">
+
+      <section id="genres">
+        <button id="genreBtn" class="toggleList bg-red-800 text-xl text-black px-4 py-2 rounded-md w-11/12 py-3 my-2">Genres</button>
+        <div id="checkboxList" class="hidden bg-white border rounded-lg w-11/12 shadow-lg p-4">
+          <label for="horror" class="block mb-2">Horror
+            <input type="checkbox" name="Horror" id="horror" />
+          </label>
+          <label for="adventure" class="block mb-2">Adventure
+            <input type="checkbox" name="Adventure" id="adventure" />
+          </label>
+          <label for="fantasy" class="block mb-2">Fantasy
+            <input type="checkbox" name="Fantasy" id="fantasy" />
+          </label>
+          <label for="animation" class="block mb-2">Animation
+            <input type="checkbox" name="Animation" id="animation" />
+          </label>
+          <label for="drama" class="block mb-2">Drama
+            <input type="checkbox" name="Drama" id="drama" />
+          </label>
+          <label for="action" class="block mb-2">Action
+            <input type="checkbox" name="Action" id="action" />
+          </label>
+          <label for="comedy" class="block mb-2">Comedy
+            <input type="checkbox" name="Comedy" id="comedy" />
+          </label>
+          <label for="history" class="block mb-2">History
+            <input type="checkbox" name="History" id="history" />
+          </label>
+          <label for="western" class="block mb-2">Western
+            <input type="checkbox" name="Western" id="western" />
+          </label>
+          <label for="thriller" class="block mb-2">Thriller
+            <input type="checkbox" name="Thriller" id="thriller" />
+          </label>
+          <label for="crime" class="block mb-2">Crime
+            <input type="checkbox" name="Crime" id="crime" />
+          </label>   
+          <label for="documentary" class="block mb-2">Documentary
+            <input type="checkbox" name="Documentary" id="documentary" />
+          </label>
+          <label for="sciFi" class="block mb-2">ScienceFiction
+            <input type="checkbox" name="SciFi" id="sciFi" />
+          </label>
+          <label for="mystery" class="block mb-2">Mystery
+            <input type="checkbox" name="Mystery" id="mystery" /> 
+          </label>
+          <label for="music" class="block mb-2">Music
+            <input type="checkbox" name="Music" id="music" />
+          </label>
+          <label for="romance" class="block mb-2">Romance
+            <input type="checkbox" name="Romance" id="romance" />
+          </label>
+          <label for="family" class="block mb-2">Family
+            <input type="checkbox" name="Family" id="family" />
+          </label>
+          <label for="war" class="block mb-2">War
+            <input type="checkbox" name="War" id="war" />
+          </label>
+        </div>
+      </section>
+    <div class="bg-gray-300 p-4 border-2px round">
           <div class="flex bg-red-800 rounded-lg text-lg text-Black font-bold">
             Peviously shown</div>
         <ul></ul>
         </div>
+    </main>
 
-    <button id="get-movie"
-      class="bg-red-800 hover:bg-blue-700 text-black font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
-      Get Movie
-    </button>
+    <footer>
+      <button id="get-movie"class="bg-red-800 hover:bg-blue-700 text-black font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+        Get Movie
+      </button>
 
     <div id="modal"
       class="fixed top-0 left-0 flex items-center justify-center w-full h-full bg-gray-800 bg-opacity-50 hidden">

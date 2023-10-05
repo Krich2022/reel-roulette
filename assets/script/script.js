@@ -14,4 +14,10 @@
     document.getElementById('modal').classList.add('hidden');
   });
 
-  document.addEventListener('click')
+
+  $(document).ready(function () {
+    $(".toggleList").click(function () {
+      $(this).siblings("#checkboxList").toggleClass("hidden");
+    });
+  });
+
