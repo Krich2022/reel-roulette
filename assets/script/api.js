@@ -1,5 +1,5 @@
 $(function () {
-  $("button").on("click", generateMovie);
+  $("#get-movie").on("click", generateMovie);
 });
 let movies = [];
 let movieNumber = 0;
