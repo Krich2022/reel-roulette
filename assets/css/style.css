@@ -1,16 +1,9 @@
-
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
-
 :root {
   --dark: #333333;
-  --pop: #DC143C;
-  --light: #D3D3D3;
+  --pop: #dc143c;
+  --light: #d3d3d3;
   background: var(--dark);
 }
-
-
 
 .modal {
   padding: 1em;
@@ -22,23 +15,21 @@
 }
 
 h1 {
-
-    font-size: x-large;
-    font-weight: bold;
-    border: 2px solid black;
-    border-radius: 2px;
-    background: var(--pop);
-    padding: 1%;
+  font-size: x-large;
+  font-weight: bold;
+  border: 2px solid black;
+  border-radius: 2px;
+  background: var(--pop);
+  padding: 1%;
 }
 
 h2 {
-    font-size: larger;
-    font-weight: bold;
-    border-bottom: 2px solid black;
-    border-radius: 2px;
-    background: var(--pop);
-    padding: 1%;
-
+  font-size: larger;
+  font-weight: bold;
+  border-bottom: 2px solid black;
+  border-radius: 2px;
+  background: var(--pop);
+  padding: 1%;
 }
 
 .serviceBtn {
@@ -52,7 +43,7 @@ h2 {
 #services {
   box-sizing: border-box;
   max-width: 90%;
-  display:flex;
+  display: flex;
   flex-direction: column;
   padding: 1%;
   border: 2px solid black;
@@ -64,7 +55,7 @@ h2 {
 #selector {
   box-sizing: border-box;
   max-width: 90%;
-  display:flex;
+  display: flex;
   flex-direction: column;
   padding: 1%;
   border: 2px solid black;

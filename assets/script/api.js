@@ -1,6 +1,12 @@
 $(function () {
   $("#get-movie").on("click", generateMovie);
+  $("#try").on("click", getRandomMovie);
+  $("#store").on("click", storeMovie);
 });
+let goodMovies = JSON.parse(localStorage.getItem("goodMovies"));
+if (!goodMovies) {
+  goodMovies = [];
+}
 let movies = [];
 let movieNumber = 0;
 const genres = {
@@ -100,6 +106,7 @@ function generateMovie(e) {
 function getRandomMovie() {
   if (movieNumber === 25) {
     generateMovie();
+    return;
   } else {
     let imdb = movies[movieNumber].imdbId;
     const url = `https://moviesdatabase.p.rapidapi.com/titles/${imdb}`;
@@ -114,7 +121,45 @@ function getRandomMovie() {
       .then((response) => response.json())
       .then((data) => {
         let moviePoster = data.results.primaryImage.url;
-        $("#moviePoster").attr("src", moviePoster);
-      });
+        if (moviePoster) {
+          $("#moviePoster").attr("src", moviePoster);
+        }
+        console.log(moviePoster);
+      })
+      .catch((error) => console.error(error));
+    $("#title").text(movies[movieNumber].title);
+
+    let streamingServices = movies[movieNumber].streamingInfo.us;
+
+    let uniqueServices = {};
+    $("streamingList").empty();
+    $.each(streamingServices, function (index, service) {
+      let serviceName = capitalizeFirstLetter(service.service);
+      if (!uniqueServices[serviceName]) {
+        uniqueServices[serviceName] = true;
+
+        let anchorElement = $("<a></a>")
+          .text(serviceName)
+          .attr("href", service.link);
+
+        let liElement = $("<li></li>").append(anchorElement);
+
+        $("#streamingList").append(liElement);
+      }
+    });
   }
+}
+
+function capitalizeFirstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+function tryAgain() {
+  movieNumber++;
+  getRandomMovie();
+}
+
+function storeMovie() {
+  goodMovies.push(movies[movieNumber]);
+  localStorage.setItem("goodMovies", JSON.stringify(goodMovies));
 }
