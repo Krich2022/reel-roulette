@@ -132,16 +132,42 @@
 
       <div id="history"><h2>History</h2></div>
 
-      <section><button class="button get-movie" id="get-movie">Get Movie</button></section>
-      <dialog class="modal" id="modal">
-          <h2>Here you are</h2>
-          <aside>Previously On</aside>
-          <div class="poster" id="poster">poster</div>
-          <div class="title" id="title">title</div>
-          <div class="streaming" id="streaming">streaming</div>
-          <button class="Store" id="store"> Lets Do It</button>
-          <button class="close" id="close"> Ehh... Try Again</button>
-      </dialog>
+      <button id="get-movie"class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+        Get Movie
+      </button>
+
+      <div id="modal"class="fixed top-0 left-0 flex items-center justify-center w-full h-full bg-gray-800 bg-opacity-50 hidden">
+      <div class="bg-white rounded-lg shadow-lg w-1/2 p-4">
+        <div class="p-2 bg-red-700 text-white rounded-t-lg">
+          Here you are
+        </div>
+        <div class="flex">
+        <div class="w-1/4 p-4">
+          <h2>Peviously on</h2>
+        <ul>
+          <li>List Item 1</li>
+          <li>List Item 2</li>
+          <li>List Item 3</li>
+        </ul>
+        </div>
+        <div id="poster" class="w-1/4 p-4">
+          <img src="your-image.jpg" alt="Movie Poster" class="w-full">
+        </div>
+        <div id="title" class="w-1/2 p-4">
+        <h2 class="text-2xl font-bold">Movie Title</h2>
+        <p>Where to get it: Streaming Name</p>
+        </div>
+      </div>
+    <div class="flex justify-end p-4">
+      <button id="store"class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+        Lets Do It!
+      </button>
+      <button id="closeModal"class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 ml-2 rounded focus:outline-none focus:shadow-outline">
+        ehh... Try Again
+      </button>
+    </div>
+  </div>
+</div>
 
     </main>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
