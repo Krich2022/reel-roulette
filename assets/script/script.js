@@ -13,3 +13,5 @@
   document.getElementById('closeModal').addEventListener('click', function () {
     document.getElementById('modal').classList.add('hidden');
   });
+
+  document.addEventListener('click')
