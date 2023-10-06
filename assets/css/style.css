@@ -1,0 +1,6 @@
+:root {
+  --dark: #333333;
+  --pop: #dc143c;
+  --light: #d3d3d3;
+  background: var(--dark);
+}
