@@ -15,20 +15,6 @@
       <h1>Reel Roulette</h1>
     </header>
     <main class="flex flex-col justify-center align-center">
-      <section id="previous">
-        <button id="previousBtn"
-          class="toggleList bg-red-800 text-xl text-black px-4 py-2 rounded-md w-11/12 py-3 my-2">Previously
-          Shown</button>
-        <div id="checkboxList" class="hidden bg-white border rounded-lg w-11/12 shadow-lg p-4">
-          <ul>
-            <li>List Item 1</li>
-            <li>List Item 2</li>
-            <li>List Item 3</li>
-          </ul>
-        </div>
-      </section>
-
-
       <section id="services">
         <button id="serviceBtn"
           class="toggleList bg-red-800 text-xl text-black px-4 py-2 rounded-md w-11/12 py-3 my-2">Services</button>
@@ -56,8 +42,6 @@
           </label>
         </div>
       </section>
-
-
       <section id="genres">
         <button id="genreBtn"
           class="toggleList bg-red-800 text-xl text-black px-4 py-2 rounded-md w-11/12 py-3 my-2">Genres</button>
@@ -118,15 +102,22 @@
           </label>
         </div>
       </section>
-
-    </main>
-
+     </main>
+      <section id="previous" class="">
+        <button id="previousBtn"
+          class="toggleList bg-red-800 text-xl text-black px-4 py-2 rounded-md w-11/12 py-3 my-2">
+          Previously Shown</button>
+        <div id="checkboxList" class="hidden bg-white border rounded-lg w-11/12 shadow-lg p-4">
+          <ul>
+          </ul>
+        </div>
+      </section>
     <footer>
       <button id="get-movie"
-        class="bg-red-800 hover:bg-blue-700 text-black font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+        class="bg-green-800 hover:bg-blue-700 text-black font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
         Get Movie
       </button>
-
+      
       <div id="modal"
         class="fixed top-0 left-0 flex items-center justify-center w-full h-full bg-gray-800 bg-opacity-50 hidden">
         <div class="bg-white rounded-lg shadow-lg w-1/2 p-4">
