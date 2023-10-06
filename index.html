@@ -101,37 +101,38 @@
           </label>
         </div>
       </section>
-     </main>
       <section id="previous" class="">
         <button id="previousBtn"
-          class="toggleList bg-red-800 text-xl text-black px-4 py-2 rounded-md w-11/12 py-3 my-2">
+          class="toggleList bg-red-800 text-xl text-black px-4 py-2 rounded-md w-11/12 py-3 my-2 hidden">
           Previously Shown</button>
         <div id="checkboxList" class="hidden bg-white border rounded-lg w-11/12 shadow-lg p-4">
           <ul>
           </ul>
         </div>
       </section>
-    <footer>
+      <footer >
+      <div class="flex justify-center items-center">
       <button id="get-movie"
         class="bg-green-800 hover:bg-blue-700 text-black font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
         Get Movie
       </button>
-      
+      </div>
       <div id="modal"
-        class="fixed top-0 left-0 flex items-center justify-center w-full h-full bg-gray-800 bg-opacity-50 hidden">
+        class="fixed top-2 left-0 bottom-2 flex items-center justify-center w-full h-full bg-gray-800 bg-opacity-50 hidden">
         <div class="bg-white rounded-lg shadow-lg w-1/2 p-4">
           <div class="p-2 bg-red-800 text-lg text-Black font-bold rounded-lg">
             Here you are
           </div>
           <div class="flex">
-            <div id="poster" class="h-1/4 p-4">
-              <img id="moviePoster" src="" alt="Movie Poster" class="w-full">
+            <div id="poster" class="h-1/4 w-1/4 p-4">
+              <img id="moviePoster" src="" alt="Movie Poster" class="w-full h-full">
             </div>
             <div class="w-1/2 p-4">
               <div class="p-2 bg-red-800 text-lg text-Black font-bold rounded-lg">
                 <div id="title">Movie Title</div>
               </div>
-              <ul id="streamingList" class="bg-red-800 rounded-lg">Where to get it</ul>
+              <h2 class="bg-red-800 rounded-lg">Where to get it</h2>
+              <ul id="streamingList"></ul>
             </div>
           </div>
           <div class="flex justify-center p-4">
@@ -150,12 +151,11 @@
           </div>
         </div>
       </div>
-
-      </main>
       <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
       <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
       <script src="./assets/script/script.js"></script>
       <script src="./assets/script/api.js"></script>
-  </body>
+    </main>
+    </body>
 
 </html>
