@@ -1,12 +1,19 @@
 $(function () {
   $("#get-movie").on("click", generateMovie);
-  $("#try").on("click", getRandomMovie);
+  $("#try").on("click", tryAgain);
   $("#store").on("click", storeMovie);
 });
 let goodMovies = JSON.parse(localStorage.getItem("goodMovies"));
 if (!goodMovies) {
   goodMovies = [];
 }
+let userServices = JSON.parse(localStorage.getItem("userServices"));
+if (!userServices) {
+  userServices = [];
+}
+userServices.forEach(function (serviceId) {
+  $("#" + serviceId).prop("checked", true);
+});
 let movies = [];
 let movieNumber = 0;
 const genres = {
@@ -42,6 +49,7 @@ const services = {
 
 function generateMovie(e) {
   e.preventDefault();
+
   usedMovies = [];
   movieNumber = 0;
   const options = {
@@ -64,6 +72,7 @@ function generateMovie(e) {
       selectedServices.push(value);
     }
   });
+  localStorage.setItem("userServices", JSON.stringify(userServices));
 
   $("#genres :checkbox:checked").each(function () {
     let genreId = $(this).attr("id");
@@ -96,16 +105,12 @@ function generateMovie(e) {
     .then((response) => response.json())
     .then((data) => {
       movies = data.result;
-      console.log(data);
-      console.log(movies);
       getRandomMovie();
     })
     .catch((error) => console.error(error));
 }
 
 function getRandomMovie() {
-  console.log("movieNumber:", movieNumber);
-  console.log(movies);
   if (movieNumber === 25) {
     generateMovie();
     return;
@@ -126,7 +131,6 @@ function getRandomMovie() {
         if (moviePoster) {
           $("#moviePoster").attr("src", moviePoster);
         }
-        console.log(moviePoster);
       })
       .catch((error) => console.error(error));
     $("#title").text(movies[movieNumber].title);
@@ -165,3 +169,19 @@ function storeMovie() {
   goodMovies.push(movies[movieNumber]);
   localStorage.setItem("goodMovies", JSON.stringify(goodMovies));
 }
+
+$("#services :checkbox").on("change", function () {
+  let serviceId = $(this).attr("id");
+  if ($(this).is(":checked")) {
+    if (!userServices.includes(serviceId)) {
+      userServices.push(serviceId);
+    }
+  } else {
+    let index = userServices.indexOf(serviceId);
+    if (index !== -1) {
+      userServices.splice(index, 1);
+    }
+  }
+
+  localStorage.setItem("userServices", JSON.stringify(userServices));
+});
