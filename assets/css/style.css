@@ -5,7 +5,7 @@
   background: var(--dark);
 }
 
-<<<<<<< Updated upstream
+
 .modal {
   padding: 1em;
   max-width: 75%;
@@ -13,10 +13,7 @@
   & > * {
     margin: 0 0 0.5rem 0;
   }
-}
 
-=======
->>>>>>> Stashed changes
 h1 {
   font-size: x-large;
   font-weight: bold;

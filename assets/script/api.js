@@ -104,6 +104,8 @@ function generateMovie(e) {
 }
 
 function getRandomMovie() {
+  console.log("movieNumber:", movieNumber);
+  console.log(movies);
   if (movieNumber === 25) {
     generateMovie();
     return;
@@ -132,7 +134,7 @@ function getRandomMovie() {
     let streamingServices = movies[movieNumber].streamingInfo.us;
 
     let uniqueServices = {};
-    $("streamingList").empty();
+    $("#streamingList").empty();
     $.each(streamingServices, function (index, service) {
       let serviceName = capitalizeFirstLetter(service.service);
       if (!uniqueServices[serviceName]) {
